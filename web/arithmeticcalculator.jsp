@@ -12,19 +12,27 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>This is arithmeticcalculator.jsp</h1>
-        <form>
+        <h1>Part 2</h1>
+        <br>
+        <h1>Arithmetic Calculator</h1>
+        <form method="GET">
             First: <input type="text" name="first"><br>
             Second: <input type="text" name="second"><br>
-            <button name="add">+</button>
-            <button name="sub">-</button>
-            <button name="mul">*</button>
-            <button name="div">%</button>
-            <br>
-            <label name="result">Result: ---</label>
-                
-                
+            <button type="submit" name="add" value="add">+</button>
+            <button type="submit" name="sub" value="sub">-</button>
+            <button type="submit" name="mul" value="mul">*</button>
+            <button type="submit" name="div"  value="div">%</button>
         </form>  
-        <a href="agecalculator.jsp" >Age Calculator</a>
+
+        ${message}
+
+
+
+        <br>
+        <a href="/Week2Lab_Calculators/age" >Age Calculator</a>
+
+
+        <br>
+        ${guestcount}
     </body>
 </html>

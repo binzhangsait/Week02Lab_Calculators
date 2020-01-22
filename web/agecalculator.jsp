@@ -39,7 +39,7 @@
         
         
         ${message}
-        <a href="arithmeticcalculator.jsp" >Arithmetic Calculator</a>
+        <a href="/Week2Lab_Calculators/arithmetic" >Arithmetic Calculator</a>
         <br>
         
         ${guestcount}
