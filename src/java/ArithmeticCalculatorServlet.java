@@ -39,13 +39,13 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
         String first = request.getParameter("first");
         String second = request.getParameter("second");
         String btnA = request.getParameter("add");
-        System.out.println(btnA+" --->get bntA");
+        System.out.println(btnA + " --->get bntA");
         String btnB = request.getParameter("sub");
-        System.out.println(btnB+" --->get bntB");
+        System.out.println(btnB + " --->get bntB");
         String btnC = request.getParameter("mul");
-        System.out.println(btnC+" --->get bntC");
+        System.out.println(btnC + " --->get bntC");
         String btnD = request.getParameter("div");
-        System.out.println(btnD+" --->get bntD");
+        System.out.println(btnD + " --->get bntD");
         String message;
         request.setAttribute("first", first);
         request.setAttribute("second", second);
@@ -53,7 +53,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
         request.setAttribute("btnB", btnB);
         request.setAttribute("btnC", btnC);
         request.setAttribute("btnD", btnD);
-        double result=0;
+        double result = 0;
 
         request.setAttribute("guestcount", "<p> you are visitor #" + counter + "!</p>");
         counter++;
@@ -66,21 +66,20 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                 double num1 = Double.parseDouble(first);
                 double num2 = Double.parseDouble(second);
                 System.out.println(first + "-------" + second);
-                    
 
-                if (request.getAttribute("btnA").equals("add")) {
+                if ("add".equals(request.getAttribute("btnA"))) {
                     result = num1 + num2;
                     message = "Result: " + result;
                     System.out.println("add: " + result);
-                } else if (request.getAttribute("btnB").equals("sub")) {
+                } else if ("sub".equals(request.getAttribute("btnB"))) {
                     result = num1 - num2;
                     message = "Result: " + result;
                     System.out.println("sub: " + result);
-                } else if (request.getAttribute("btnC").equals("mul")) {
+                } else if ("mul".equals(request.getAttribute("btnC"))) {
                     result = num1 * num2;
                     message = "Result: " + result;
                     System.out.println("mul: " + result);
-                } else if (request.getAttribute("btnD").equals("div")) {
+                } else if ("div".equals(request.getAttribute("btnD"))) {
                     if (num2 == 0) {
                         message = "Result: invalid";
                     } else {
@@ -89,11 +88,11 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                     }
                     System.out.println("div: " + result);
                 } else {
-                    message = "Nothing"; 
+                    message = "Nothing";
                 }
                 System.out.println("get number");
             } catch (Exception e) {
-//                e.printStackTrace();
+                e.printStackTrace();
                 message = "Result: invalid";
                 System.out.println("exception");
             }

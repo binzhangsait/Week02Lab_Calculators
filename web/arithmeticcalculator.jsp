@@ -13,11 +13,10 @@
     </head>
     <body>
         <h1>Part 2</h1>
-        <br>
         <h1>Arithmetic Calculator</h1>
         <form method="GET">
-            First: <input type="text" name="first"><br>
-            Second: <input type="text" name="second"><br>
+            First: <input type="text" name="first" value="${first}"><br>
+            Second: <input type="text" name="second" value="${second}"><br>
             <button type="submit" name="add" value="add">+</button>
             <button type="submit" name="sub" value="sub">-</button>
             <button type="submit" name="mul" value="mul">*</button>
