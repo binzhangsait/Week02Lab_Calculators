@@ -89,7 +89,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                     }
                     System.out.println("div: " + result);
                 } else {
-                    message = "Nothing";
+                    message = "Nothing"; 
                 }
                 System.out.println("get number");
             } catch (Exception e) {
